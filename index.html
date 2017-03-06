@@ -3,251 +3,18 @@
 <head>
     <title>Layout-Yvts</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="desktop.css" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="phone.css" />
     <style>
-        * { 
-            font-family: "Caveat Brush";
-            box-sizing: border-box
-        }
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p {
-            margin: 0;
-            padding: 0;
-        }
-        .clearfix::after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-        .full-width {
-            width: 100%;
-        }
-        .fixed-width {
-            width: 1200px;
-            margin: auto;
-        }
-        .col-3{
-            float: left;
-            width: 380px;
-            margin-left: 10px;
-            margin-right: 10px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        .col-4 {
-            float: left;
-            width: 280px;
-            margin-left: 10px;
-            margin-right: 10px;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-        nav {
-            height: 45px;
-            background-color: #000;
-        }
-        nav .logo{
-            float: left;
-            color: #ccd402;
-            line-height: 45px;
-            font-size: 40px;
-            font-family: "Oleo Script"
-        }
-        nav .menu {
-            float: right;
-        }
-        nav .menu ul {
-            margin: 0;
-            padding: 0;
-        }
-        nav .menu li {
-            float: left;
-            list-style: none;
-        }
-        nav .menu a {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            line-height: 45px;
-            padding-left: 15px;
-            padding-right: 15px;
-            font-size: 26px;
-            transition: all .3s;
-        }
-        nav .menu a:hover {
-            background-color: #555;
-        }
-        header {
-            height: 750px;
-            background-image: url(images/view.jpg);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
             
-            display: table;
-        }
-        header .overlay {
-            height: 750px;
-            background-color: rgba(0,0,0,.4);
-            
-            display: table-cell;
-            vertical-align: middle;
-        }
-        header .content {
-            color: #fff;
-          /*  width: 400px;   */
-            margin: auto;
-            text-align: center;
-        }
-        header .content h1 {
-            font-size: 120px;
-            font-family: "Acme"
-        }
-        header .content p {
-            font-family: "Acme"
-        }
-        header .content a {
-            display: inline-block;
-            width: 160px;
-            color: #fff;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            background-color: #7618a8;
-            text-decoration: none;
-            margin-top: 20px;
-            font-family: "Acme";
-        }
-        #about{
-            padding-top: 100px;
-            padding-bottom: 100px;
-            text-align: center;
-        }
-        #about .col-3 {
-            padding-top: 70px;
-        }
-        #about .col-3 h3{
-            font-size: 30px;
-            padding-top: 30px;
-            padding-bottom: 30px;
-        } 
-        #about .col-3 p {
-            font-size: 22px;
-            line-height: 2em;
-            opacity: .8;
-        }
-        #about h2 {
-            font-size: 40px;
-        }
-        #about p{
-            font-size: 20px;
-        }
-        #works {
-            padding-top: 50px;
-            padding-bottom: 300px;
-            background-color: #2f2a2a;
-            color: #fff;
-            text-align: center;
-        }
-        #works .col-3 {
-            height: 380px;
-            padding-left: 0px;
-            background-color: aqua;
-        }
-       /* 
-        #works h2 {
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }  */
-        #works p{
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
-        #works .col-3 h4 {
-            font-size: 30px;
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
-        #works .col-3 div{
-            font-size: 27px;
-            color: red
-        }
-        #works .col-3 p {
-            font-size: 22px;
-            color: cornflowerblue;
-            padding-top: 0px;
-        }
-        #works .col-3 img {
-            width: 105%;
-        }
-        #service {
-            padding-top: 100px;
-            padding-bottom: 100px;
-            text-align: center;
-        }
-        #service p {
-            font-size: 30px;
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
-        #service .gallery {
-            overflow: hidden;
-            height: 280px;
-        }
-        #service img {
-            width: 100%;
-        }
-        #service h2 {
-            font-size: 40px;
-        }
-        #service .col-4 p {
-            font-family: "Acme";
-            font-size: 20px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            opacity: .8;
-        }
-        #service .col-4 h4 {
-            font-family: "Acme";
-            padding-top: 0px;
-            padding-bottom: 10px;
-        }
-        #service .col-4 .social a {
-            text-decoration: none;
-            color: #000;
-            margin-left: 5px;
-            margin-right: 5px;
-            
-        }
-        footer {
-            padding-top: 30px;
-            padding-bottom: 30px;
-            font-size: 16pt;
-            background-color: #333;
-            color: #eee;
-        }
-        footer a {
-            color: #eee;
-            text-decoration: none;
-            margin-left: 30px;
-        }
-        footer .copyrights {
-            float: left;
-        }
-        footer .sns {
-            float: right;
-        }
-        
     </style>
 </head>
 <body>
@@ -315,7 +82,7 @@
             deserunt dolor, enim et an culpa iudicem ea nam ea tractavissent.
         </p>
         <div class="col-3">
-            <img src="images/jordan.jpg" alt="" width="380" height="380">
+            <img src="images/jordan.jpg" alt=""  width="380" height="380">
             <h4>Michael Jordan</h4>
             <div>Legend</div>
             <p>
@@ -323,7 +90,7 @@
             </p>
         </div>
         <div class="col-3">
-            <img src="images/kobe.jpg" alt="" width="380" height="380">
+            <img src="images/kobe.jpg" alt=""  width="380" height="380">
             <h4>Kobe Bryant</h4>
             <div>Immortal</div>
             <p>
@@ -331,7 +98,7 @@
             </p>
             </div>
         <div class="col-3">
-            <img src="images/james.jpg" alt="" width="380" height="380">
+            <img src="images/james.jpg" alt=""  width="380" height="380">
             <h4>Lebron James</h4>
             <DIV>Spirit</DIV>
             <p>
